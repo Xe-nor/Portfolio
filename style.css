@@ -137,10 +137,7 @@ h3.hello span {
   color: #fff;
   margin-bottom: 10px;
 }
-.btn-box {
-  display: flex;
-  justify-content: space-evenly;
-}
+
 .btn-box button {
   background: transparent;
   border: none;
@@ -168,12 +165,12 @@ h3.hello span {
 }
 .content ul li {
   list-style: none;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 .content ul li span {
   color: #b6194b;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* <!------------ MY WORK ------------> */
@@ -238,6 +235,11 @@ h3.hello span {
 }
 .work:hover .layer {
   height: 100%;
+}
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8em 0;
 }
 
 .btn {
@@ -314,10 +316,7 @@ h3.hello span {
   color: crimson;
   background: none;
 }
-.downl {
-  display: flex;
-  justify-content: center;
-}
+
 .left {
   flex-basis: 50%;
 }
@@ -419,8 +418,6 @@ h3.hello span {
 }
 .social-icons {
   margin-top: 30px;
-  display: flex;
-  justify-content: space-evenly;
 }
 .social-icons a {
   text-decoration: none;
@@ -444,10 +441,6 @@ h3.hello span {
   border-radius: 6px;
   border: 1px solid crimson;
   transition: all 0.5s ease;
-}
-.downlo {
-  display: flex;
-  justify-content: center;
 }
 .contact-right form {
   width: 100%;
@@ -574,9 +567,13 @@ nav .fa-solid {
   .content ul li span {
     font-size: 15px;
   }
-  .content ul li{
+  .content ul li {
     font-size: 14px;
     font-weight: 700;
+  }
+  .btn-box {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .btn-box button {
@@ -632,8 +629,12 @@ nav .fa-solid {
     flex-basis: 100%;
   }
   .btn2 {
-    margin: 15px auto;
+    margin: 2em auto;
   }
+.social-icons{
+   display: flex;
+    justify-content: space-evenly;
+}
 
   .information {
     justify-content: center;
@@ -641,6 +642,13 @@ nav .fa-solid {
   }
   .information i {
     width: 1em;
+  }
+  .row p {
+    text-align: center;
+  }
+  .downl {
+    display: flex;
+    justify-content: center;
   }
 
   /* <!------- contact--------> */
@@ -675,9 +683,13 @@ nav .fa-solid {
   .content ul li span {
     font-size: 20px;
   }
-  .content ul li{
+  .content ul li {
     font-size: 18px;
     font-weight: 700;
+  }
+  .btn-box {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .btn-box button {
@@ -734,15 +746,26 @@ nav .fa-solid {
     flex-basis: 100%;
   }
   .btn2 {
-    margin: 15px auto;
+    margin: 30px auto;
   }
 
+  .social-icons {
+    display: flex;
+    justify-content: space-evenly;
+  }
   .information {
     justify-content: center;
     font-size: 14px;
   }
   .information i {
     width: 1em;
+  }
+  .row p {
+    text-align: center;
+  }
+  .downl {
+    display: flex;
+    justify-content: center;
   }
 
   /* <!------- Footer--------> */
