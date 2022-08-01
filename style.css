@@ -67,7 +67,7 @@ nav ul li a:hover::after {
 
 h3.hello {
   font-size: 40px;
-  margin: 15px 0;
+  /* margin: 15px 0; */
 }
 h3.hello span {
   font-size: 40px;
@@ -79,7 +79,6 @@ h3.hello span {
   align-items: center;
   justify-content: center;
   /* justify-items: center; */
-  /* margin-left: 9.3em; */
 }
 .container .text {
   position: relative;
@@ -472,6 +471,14 @@ form .btn2 {
   background: none;
 }
 
+#msg {
+  margin: 10px 0;
+  font-style: italic;
+  color: #61b752;
+  font-weight: 700;
+  display: block;
+}
+
 /* <!------------ FOOTER------------> */
 .copyright {
   width: 100%;
@@ -528,11 +535,13 @@ nav .fa-solid {
     display: block;
     margin: 25px;
   }
-
+  .logo {
+    margin-left: 15px;
+  }
   .fa-bars {
     position: absolute;
     top: 1.95em;
-    left: 12em;
+    left: 12.3em;
     cursor: pointer;
   }
   .fa-xmark {
@@ -601,9 +610,9 @@ nav .fa-solid {
   .wrapperr {
     display: block;
     text-align: center;
-    position: relative;
-    right: 9.3em;
-    bottom: 0.9em;
+    /* position: relative; */
+    /* right: 9.3em;
+    bottom: 0.9em; */
     width: 100%;
     overflow-x: hidden;
   }
@@ -633,10 +642,10 @@ nav .fa-solid {
   .btn2 {
     margin: 2em auto;
   }
-.social-icons{
-   display: flex;
+  .social-icons {
+    display: flex;
     justify-content: space-evenly;
-}
+  }
 
   .information {
     justify-content: center;
@@ -652,6 +661,10 @@ nav .fa-solid {
     display: flex;
     justify-content: center;
   }
+  .msglast {
+  display: flex;
+  justify-content: center;
+}
 
   /* <!------- contact--------> */
   .copyright {
@@ -706,7 +719,7 @@ nav .fa-solid {
   }
 
   h3.hello span {
-    display: block;
+    /* display: block; */
     font-size: 50px;
   }
 
@@ -718,9 +731,9 @@ nav .fa-solid {
   .wrapperr {
     display: block;
     text-align: center;
-    position: relative;
-    right: 9.3em;
-    bottom: 0.9em;
+    /* position: relative; */
+    /* right: 9.3em;
+    bottom: 0.9em; */
     width: 100%;
     overflow-x: hidden;
   }
@@ -732,7 +745,7 @@ nav .fa-solid {
   }
 
   .text.sec-text:before {
-    width: 80%;
+    width: 100%;
     /* margin-left: 60px; */
   }
   /* <!------- Skills--------> */
@@ -769,6 +782,10 @@ nav .fa-solid {
     display: flex;
     justify-content: center;
   }
+  .msglast {
+  display: flex;
+  justify-content: center;
+}
 
   /* <!------- Footer--------> */
   .copyright {
