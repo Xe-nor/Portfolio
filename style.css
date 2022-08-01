@@ -76,8 +76,10 @@ h3.hello span {
 }
 .wrapperr {
   display: flex;
-  justify-items: center;
-  margin-left: 9.3em;
+  align-items: center;
+  justify-content: center;
+  /* justify-items: center; */
+  /* margin-left: 9.3em; */
 }
 .container .text {
   position: relative;
