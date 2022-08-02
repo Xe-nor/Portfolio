@@ -5,20 +5,18 @@
   font-family: "Poppins", sans-serif;
 }
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 body {
   background: #080808;
   color: #fff;
+
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
   height: 100vh;
 }
 
 #header {
-  scroll-snap-align: start;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 /* <!------------ NAVBAR------------> */
@@ -798,6 +796,4 @@ nav .fa-solid {
   }
 }
 
-
- /* <!------animations--------> */
-
+/* <!------animations--------> */
