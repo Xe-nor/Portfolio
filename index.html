@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Comforter&family=Poppins:wght@200;300;400;500;600&family=Zen+Kurenaido&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 </head>
 
 <body>
@@ -54,13 +57,14 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+                <div class="about-col-1" data-aos="fade-right">
                     <img src="images/user.jpg" alt="userimg">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p>A motivated and Personable student with hands-on
-                        experience in digital marketing and web development. Creative developer dedicated to developing
+                    <h1 class="sub-title" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">About me</h1>
+                    <p data-aos="fade-left">A motivated and Personable student with hands-on
+                        experience in digital marketing and web development. Creative developer dedicated to
+                        developing
                         and optimizing
                         interactive, user-friendly and feature-rich websites. Leveraging solid analytical skills and
                         strong
@@ -69,12 +73,15 @@
 
                     <div class="hero">
                         <div class="btn-box">
-                            <button id="btn1" onclick="openexperience()">Experience</button>
-                            <button id="btn2" onclick="openeducation()">Education</button>
-                            <button id="btn3" onclick="opencertificates()">Certificates</button>
+                            <button id="btn1" onclick="openexperience()" data-aos="fade-up"
+                                data-aos-delay="50">Experience</button>
+                            <button id="btn2" onclick="openeducation()" data-aos="fade-up"
+                                data-aos-delay="200">Education</button>
+                            <button id="btn3" onclick="opencertificates()" data-aos="fade-up"
+                                data-aos-delay="400">Certificates</button>
                         </div>
                     </div>
-                    <div class="eater">
+                    <div class="eater" data-aos="fade-up" data-aos-delay="500">
                         <div class="content" id="content1">
                             <div class="content-left">
                                 <ul>
@@ -120,10 +127,10 @@
     <!------------ PORTFOLIO ------------>
     <div id="portfolio">
         <div class="container">
-            <div class="sub-title" id="my-work">My Work</div>
+            <div class="sub-title" id="my-work" data-aos="fade-right">My Work</div>
             <div class="work-list">
                 <div class="work">
-                    <div id="work1"><img src="images/work1.1.png" alt="work1"></div>
+                    <div id="work1"><img src="images/work1.1.png" alt="work1" data-aos="flip-down"></div>
 
 
                     <div class="layer">
@@ -134,7 +141,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work2.6.png" alt="work2">
+                    <img src="images/work2.6.png" alt="work2" data-aos="flip-down" data-aos-delay="400">
                     <div class="layer">
                         <h3>Mini Indie game</h3>
                         <p>Simple games developed using C</p><a href="https://github.com/Xe-nor/mini-projects"
@@ -142,7 +149,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="images/work-3.png" alt="work3">
+                    <img src="images/work-3.png" alt="work3" data-aos="flip-down" data-aos-delay="800">
                     <div class="layer">
                         <h3>Portfolio-website</h3>
                         <p>Everything there is to know about me</p><a href="#"><i
@@ -150,31 +157,35 @@
                     </div>
                 </div>
             </div>
-            <a href="https://github.com/Xe-nor?tab=repositories" class="btn" target="_blank">See more</a>
+            <a href="https://github.com/Xe-nor?tab=repositories" class="btn" target="_blank" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom">See more</a>
         </div>
     </div>
 
     <!------------ SKILLS ------------>
     <div id="skills">
         <div class="container">
-            <div class="sub-title" id="myskill">My Skills</div>
+            <div class="sub-title" id="myskill" data-aos="fade-right">My Skills</div>
             <div class="skill-content">
                 <div class="column left">
                     <div class="writing">
-                        <p>fluent in multiple languages including those of english, hindi, odia, tamil and french. <br>
-                            I have hands on experience in digital marketing sector while working as an intern with
-                            UNSCHOOL, apart from being a web-developer, i am proficient in coding languages like C,C++
+                        <p data-aos="fade-up" data-aos-delay="200">Fluent in multiple languages including
+                            english, hindi, odia, tamil and french. <br>
+                            I have hands on experience in digital marketing sector while working as an intern at
+                            UNSCHOOL. <br> Apart from being a web-developer, i am proficient in coding languages like
+                            C,C++
                             and JAVA. <br>
                             I have worked on multiple Database Management Systems like MySQL and MongoDB.
                         </p>
-                        <div class="downl">
+                        <div class="downl" data-aos="fade-up" data-aos-delay="400"
+                            data-aos-anchor-placement="top-bottom">
                             <a href="https://drive.google.com/file/d/1FD80yTaIOMwoUF1_PXL_Vtxcxeik1274/view?usp=sharing"
                                 target="_blank">Download
                                 Resume</a>
                         </div>
                     </div>
                 </div>
-                <div class="column right">
+                <div class="column right" data-aos="fade-up" data-aos-delay="300">
                     <div class="bars">
                         <div class="info">
                             <span>HTML</span>
@@ -236,32 +247,42 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="sub-title">Contact</h1>
-                    <p class="information"><i class="fa-solid fa-paper-plane"></i>amarendra.amar.dash@gmail.com</p>
-                    <p class="information"><i class="fa-solid fa-phone"></i>8249702599</p>
-                    <p class="information"><i class="fa-solid fa-location-pin"></i>Bhubaneswar</p>
+                    <h1 class="sub-title" data-aos="fade-right">Contact</h1>
+                    <p class="information" data-aos="fade-up" data-aos-delay="100"><i
+                            class="fa-solid fa-paper-plane"></i>amarendra.amar.dash@gmail.com</p>
+                    <p class="information" data-aos="fade-up" data-aos-delay="100"><i
+                            class="fa-solid fa-phone"></i>8249702599</p>
+                    <p class="information" data-aos="fade-up" data-aos-delay="100"><i
+                            class="fa-solid fa-location-pin"></i>Bhubaneswar</p>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/xe.nor/" target="_blank"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/amarendradash/" target="_blank"><i
-                                class="fa-brands fa-linkedin-in" target="_blank"></i></a>
-                        <a href="https://twitter.com/Amarend39094071" target="_blank"><i
-                                class="fa-brands fa-twitter"></i></a>
-                        <a href="https://github.com/Xe-nor" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/xe.nor/" target="_blank" data-aos="flip-down"
+                            data-aos-delay="200"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amarendradash/" target="_blank" data-aos="flip-down"
+                            data-aos-delay="400"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a>
+                        <a href="https://twitter.com/Amarend39094071" target="_blank" data-aos="flip-down"
+                            data-aos-delay="600"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/Xe-nor" target="_blank" data-aos="flip-down" data-aos-delay="800"><i
+                                class="fa-brands fa-github"></i></a>
                     </div>
                     <div class="downl">
                         <a href="https://drive.google.com/file/d/1FD80yTaIOMwoUF1_PXL_Vtxcxeik1274/view?usp=sharing"
-                            download class="btn2" target="_blank">Download Resume</a>
+                            download class="btn2" target="_blank" data-aos="fade-up" data-aos-delay="600"
+                            data-aos-anchor-placement="top-bottom">Download
+                            Resume</a>
                     </div>
                 </div>
                 <div class="contact-right">
-                    <form action="https://formspree.io/f/xknewzqp" method="POST"
-                        name="submit-to-google-sheet" id="my-form">
-                        <input type="text" name="NAME" placeholder="Your Name" required>
-                        <input type="email" name="EMAIL" placeholder="Your Email" required>
-                        <textarea name="MESSAGE" rows="5" placeholder="Your Message"></textarea>
+                    <form action="https://formspree.io/f/xknewzqp" method="POST" name="submit-to-google-sheet"
+                        id="my-form">
+                        <input type="text" name="NAME" placeholder="Your Name" required data-aos="fade-left"
+                            data-aos-delay="100">
+                        <input type="email" name="EMAIL" placeholder="Your Email" required data-aos="fade-left"
+                            data-aos-delay="200">
+                        <textarea name="MESSAGE" rows="5" placeholder="Your Message" data-aos="fade-left"
+                            data-aos-delay="300"></textarea>
                         <div class="downl">
-                            <button type="submit" class="btn2">Submit</button>
+                            <button type="submit" class="btn2" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom">Submit</button>
                         </div>
                     </form>
                     <div class="msglast"><span id="msg"><i></i> </span></div>
@@ -280,6 +301,13 @@
 
     <script src="index2.js"></script>
     <script src="https://kit.fontawesome.com/7cec1eec8f.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+    </script>
 
 </body>
 

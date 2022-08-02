@@ -1,3 +1,5 @@
+//--------------------------------------TYPING ANIMATION IN HEADER
+
 const text = document.querySelector(".sec-text");
 const textLoad = () => {
   setTimeout(() => {
@@ -16,7 +18,7 @@ const textLoad = () => {
 textLoad();
 setInterval(textLoad, 12000);
 
-
+//-------------------------------------- TAB ANIMATION IN ABOUT
 
 var content1 = document.getElementById("content1");
 var content2 = document.getElementById("content2");
@@ -34,7 +36,6 @@ function openexperience() {
   btn3.style.color = "#ababab";
 }
 function openeducation() {
-
   content1.style.display = "none";
   content2.style.display = "block";
   content3.style.display = "none";
@@ -43,7 +44,6 @@ function openeducation() {
   btn2.style.color = "red";
 }
 function opencertificates() {
-
   content1.style.display = "none";
   content2.style.display = "none";
   content3.style.display = "block";
@@ -52,7 +52,7 @@ function opencertificates() {
   btn3.style.color = "red";
 }
 
-
+//-------------------------------------- HAMBURGER MENU
 
 
 var sidemeu = document.getElementById("sidemenu");
@@ -64,57 +64,61 @@ function closemenu() {
 }
 
 
+//-------------------------------------- GET FORM DATA IN GOOGLE SHEET
+
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzwK-kRsdCg21ndt7xIDaKY7DLcnw0OahGlkhxbfk2qtfPZY0hhwA3ScjaswAu_PnV2/exec";
 const forrm = document.forms["submit-to-google-sheet"];
-const msg=document.getElementById("msg")
+const msg = document.getElementById("msg");
 
 forrm.addEventListener("submit", (e) => {
   e.preventDefault();
   fetch(scriptURL, { method: "POST", body: new FormData(forrm) })
     .then((response) => {
-      msg.innerHTML = "Message sent successfully!"
+      msg.innerHTML = "Message sent successfully!";
       setTimeout(function () {
-        msg.innerHTML=""
-      }, 5000)
-      forrm.reset()
+        msg.innerHTML = "";
+      }, 5000);
+      forrm.reset();
     })
     .catch((error) => console.error("Error!", error.message));
 });
 
+//--------------------------------------PREVENT DEFAULT ACTION OF FORMSPREE + ERROR HANDLING
 
- var form = document.getElementById("my-form");
+var form = document.getElementById("my-form");
 
- async function handleSubmit(event) {
-   event.preventDefault();
-   var status = document.getElementById("my-form-status");
-   var data = new FormData(event.target);
-   fetch(event.target.action, {
-     method: form.method,
-     body: data,
-     headers: {
-       Accept: "application/json",
-     },
-   })
-     .then((response) => {
-       if (response.ok) {
-         status.innerHTML = "";
-         form.reset();
-       } else {
-         response.json().then((data) => {
-           if (Object.hasOwn(data, "errors")) {
-             status.innerHTML = data["errors"]
-               .map((error) => error["message"])
-               .join(", ");
-           } else {
-             status.innerHTML =
-               "Oops! There was a problem submitting your form";
-           }
-         });
-       }
-     })
-     .catch((error) => {
-       status.innerHTML = "Oops! There was a problem submitting your form";
-     });
- }
- form.addEventListener("submit", handleSubmit);
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        status.innerHTML = "";
+        form.reset();
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, "errors")) {
+            status.innerHTML = data["errors"]
+              .map((error) => error["message"])
+              .join(", ");
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      status.innerHTML = "Oops! There was a problem submitting your form";
+    });
+}
+form.addEventListener("submit", handleSubmit);
+
+
