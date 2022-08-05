@@ -70,18 +70,22 @@ nav ul li a:hover::after {
 
 h3.hello {
   font-size: 40px;
-  /* margin: 15px 0; */
 }
 h3.hello span {
   font-size: 40px;
   font-weight: 700;
   color: red;
 }
+.super {
+  display: flex;
+  justify-content: center;
+}
+.master {
+  display: inline-block;
+}
 .wrapperr {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* justify-items: center; */
+  align-items: flex-start;
 }
 .container .text {
   position: relative;
