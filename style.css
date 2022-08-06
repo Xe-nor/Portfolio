@@ -145,7 +145,7 @@ h3.hello span {
 }
 .head i {
   color: #fff;
-  padding: 10px;
+  padding: 5px;
   transition: transform 0.5s, color 0.5s !important;
 }
 .head i:hover {
@@ -230,7 +230,7 @@ h3.hello span {
 .port i {
   color: #fff;
   padding: 10px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   transition: transform 0.5s, color 0.5s !important;
 }
 .port i:hover {
