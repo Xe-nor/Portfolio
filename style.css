@@ -21,7 +21,7 @@ body {
   height: 100vh;
 }
 
-/* <!------------ NAVBAR------------> */
+/* <!---------------------------------------------------------------------------------------------------------------------------------- NAVBAR------------> */
 
 .down {
   display: flex;
@@ -80,7 +80,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-/* <!------------ MAIN TEXT------------> */
+/* <!---------------------------------------------------------------------------------------------------------------------------------- MAIN TEXT--------> */
 .header-text {
   margin-top: 150px;
   display: flex;
@@ -137,7 +137,7 @@ h3.hello span {
     left: 0%;
   }
 }
-/* <!------------ ABOUT ------------> */
+/* <!------------------------------------------------------------------------- ABOUT ---------------------------------------------------------------------> */
 .head {
   display: flex;
   justify-content: center;
@@ -222,7 +222,7 @@ h3.hello span {
   font-size: 18px;
 }
 
-/* <!------------ MY WORK ------------> */
+/* <!-------------------------------------------------------------------------- MY WORK ----------------------------------------------------------------> */
 .port {
   display: flex;
   justify-content: center;
@@ -329,7 +329,7 @@ h3.hello span {
   cursor: pointer;
 }
 
-/* <!------------ SCROLL TO TOP BUTTON ------------> */
+/* <!------------------------------------------------------------------ SCROLL TO TOP BUTTON -----------------------------------------------------------> */
 .gotopbtn {
   position: fixed;
   width: 50px;
@@ -347,15 +347,13 @@ h3.hello span {
   z-index: 5;
 }
 .gotopbtn:hover {
-  /* transform: translatey(-5px) !important; */
   background: #000000;
   color: rgb(255, 0, 0);
-  /* box-shadow: 0 0.5em 0.5em -0.4em; */
   transform: translateY(-0.25em);
   cursor: pointer;
 }
 
-/* <!------------ SKILLS ------------> */
+/* <!------------------------------------------------------------------------- SKILLS -------------------------------------------------------------------> */
 .ski {
   display: flex;
   justify-content: center;
@@ -483,7 +481,7 @@ h3.hello span {
   }
 }
 
-/* <!------------ CONTACT------------> */
+/* <!-------------------------------------------------------------------------- CONTACT------------------------------------------------------------------> */
 #contact {
   margin: 100px 10%;
 }
@@ -548,12 +546,37 @@ form .btn2 {
   font-size: 16px;
   margin-top: 15px;
   cursor: pointer;
+  display: block;
+}
+form .btn2:disabled{
+  color: grey;
+  border-color: grey;
+}
+.loader {
+  margin-top: 20px;
+  margin-left: 20px;
+  pointer-events: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+}
+@keyframes an1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .btn2:hover {
   color: crimson;
   background: none;
 }
+
 
 #msg {
   margin: 10px 0;
@@ -563,7 +586,7 @@ form .btn2 {
   display: block;
 }
 
-/* <!------------ FOOTER------------> */
+/* <!------------------------------------------------------------------------ FOOTER----------------------------------------------------------------------> */
 .copyright {
   width: 100%;
   text-align: center;
@@ -577,7 +600,7 @@ form .btn2 {
   color: #ff004f;
 }
 
-/* <!------------ SMALL SCREEN MEDIA QUERIES------------> */
+/* <!-------------------------------------------------------------- SMALL SCREEN MEDIA QUERIES-----------------------------------------------------------> */
 ul .fa-solid {
   display: none;
 }
@@ -586,10 +609,19 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 767px) {
+  .down,
+  .port,
+  .head,
+  .ski {
+    display: none;
+  }
+  .loader {
+    margin-left: 0;
+  }
   .header-text {
     margin-top: 200px;
   }
-  /* <!------- nav bar--------> */
+  /* <!------------------------------------------------------------------------------------------------------------------------------------ nav bar--------> */
 
   ul .fa-solid {
     display: block;
@@ -636,7 +668,7 @@ nav .fa-solid {
     cursor: pointer;
   }
 
-  /* <!------- about--------> */
+  /* <!-------------------------------------------------------------------------------------------------------------------------------- about--------> */
 
   .sub-title {
     font-size: 40px;
@@ -676,7 +708,7 @@ nav .fa-solid {
     margin-bottom: 10px;
   }
 
-  /* <!------- home text--------> */
+  /* <!-------------------------------------------------------------------------------------------------------------------------- home text--------> */
 
   h3.hello {
     font-size: 20px;
@@ -694,9 +726,6 @@ nav .fa-solid {
   .wrapperr {
     display: block;
     text-align: center;
-    /* position: relative; */
-    /* right: 9.3em;
-    bottom: 0.9em; */
     width: 100%;
     overflow-x: hidden;
   }
@@ -707,17 +736,13 @@ nav .fa-solid {
     font-weight: 700;
   }
 
-  .text.sec-text:before {
-    width: 60%;
-    margin-left: 60px;
-  }
-  /* <!------- Skills--------> */
+  /* <!------------------------------------------------------------------------------------------------------------------------------- Skills--------> */
 
   .left .writing a {
     margin: 25px 0;
   }
 
-  /* <!------- contact--------> */
+  /* <!----------------------------------------------------------------------------------------------------------------------------- contact--------> */
 
   .contact-left,
   .contact-right {
@@ -750,14 +775,23 @@ nav .fa-solid {
     justify-content: center;
   }
 
-  /* <!------- contact--------> */
+  /* <!-------------------------------------------------------------------------------------------------------------------------------- contact--------> */
   .copyright {
     font-size: 12px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* <!------- about--------> */
+  /* <!----------------------------------------------------------------------------------------------------------------------------------- about--------> */
+  .down,
+  .port,
+  .head,
+  .ski {
+    display: none;
+  }
+  .loader {
+    margin-left: 0;
+  }
 
   .sub-title {
     font-size: 60px;
@@ -796,14 +830,13 @@ nav .fa-solid {
     margin-bottom: 10px;
   }
 
-  /* <!------- home text--------> */
+  /* <!----------------------------------------------------------------------------------------------------------------------------- home text--------> */
 
   h3.hello {
     font-size: 50px;
   }
 
   h3.hello span {
-    /* display: block; */
     font-size: 50px;
   }
 
@@ -815,9 +848,6 @@ nav .fa-solid {
   .wrapperr {
     display: block;
     text-align: center;
-    /* position: relative; */
-    /* right: 9.3em;
-    bottom: 0.9em; */
     width: 100%;
     overflow-x: hidden;
   }
@@ -828,17 +858,13 @@ nav .fa-solid {
     font-weight: 700;
   }
 
-  .text.sec-text:before {
-    width: 100%;
-    /* margin-left: 60px; */
-  }
-  /* <!------- Skills--------> */
+  /* <!-------------------------------------------------------------------------------------------------------------------------------- Skills--------> */
 
   .left .writing a {
     margin: 25px 0;
   }
 
-  /* <!------- contact--------> */
+  /* <!------------------------------------------------------------------------------------------------------------------------------- contact--------> */
 
   .contact-left,
   .contact-right {
@@ -871,10 +897,8 @@ nav .fa-solid {
     justify-content: center;
   }
 
-  /* <!------- Footer--------> */
+  /* <!--------------------------------------------------------------------------------------------------------------------------------- Footer--------> */
   .copyright {
     font-size: 12px;
   }
 }
-
-/* <!------animations--------> */

@@ -54,7 +54,8 @@
             </div>
 
         </div>
-        <div class="down"> <a href="#about"><i class="fa-solid fa-angles-down" data-aos="fade-up" data-aos-anchor-placement="
+        <div class="down"> <a href="#about"><i class="fa-solid fa-angles-down" data-aos="fade-up"
+                    data-aos-anchor-placement="
                 top-bottom"></i></a></div>
 
     </div>
@@ -256,7 +257,7 @@
             </div>
 
         </div>
-        <div class="aos" data-aos="fade-up"  data-aos-delay="700"  data-aos-anchor-placement="top-bottom">
+        <div class="aos" data-aos="fade-up" data-aos-delay="700" data-aos-anchor-placement="top-bottom">
             <div class="ski"><a href="#contact"><i class="fa-solid fa-angles-down"></i></a></div>
         </div>
     </div>
@@ -294,15 +295,25 @@
                 <div class="contact-right">
                     <form action="https://formspree.io/f/xknewzqp" method="POST" name="submit-to-google-sheet"
                         id="my-form">
-                        <input type="text" name="NAME" placeholder="Your Name" required data-aos="fade-up"
-                            data-aos-delay="100">
-                        <input type="email" name="EMAIL" placeholder="Your Email" required data-aos="fade-up"
-                            data-aos-delay="200">
-                        <textarea name="MESSAGE" rows="5" placeholder="Your Message" data-aos="fade-up"
-                            data-aos-delay="300"></textarea>
+
+                        <input id="name" type="text" name="NAME" placeholder="Your Name" required data-aos="fade-up"
+                            data-aos-delay="100" onkeyup="isEmpty()">
+
+                        <input id="email" type="email" name="EMAIL" placeholder="Your Email" required data-aos="fade-up"
+                            data-aos-delay="200" onkeyup="isEmpty()">
+
+                        <textarea id="text" name="MESSAGE" rows="5" placeholder="Your Message" data-aos="fade-up"
+                            data-aos-delay="300" onkeyup="isEmpty()"></textarea>
+
                         <div class="downl">
-                            <button type="submit" class="btn2" data-aos="fade-up"
-                               data-aos-delay="600" data-aos-anchor-placement="top-bottom">Submit</button>
+
+                            <div class="load">
+
+                                <button type="submit" class="btn2 " id="submit" data-aos="fade-up"
+                                    data-aos-delay="600" data-aos-anchor-placement="top-bottom"
+                                    onclick="loading()" onsubmit="isEmpty()" disabled>Submit</button>
+
+                                </div>
                         </div>
                     </form>
                     <div class="msglast"><span id="msg"><i></i> </span></div>

@@ -54,7 +54,6 @@ function opencertificates() {
 
 //-------------------------------------- HAMBURGER MENU
 
-
 var sidemeu = document.getElementById("sidemenu");
 function openmenu() {
   sidemeu.style.right = "0";
@@ -62,7 +61,6 @@ function openmenu() {
 function closemenu() {
   sidemeu.style.right = "-200px";
 }
-
 
 //-------------------------------------- GET FORM DATA IN GOOGLE SHEET
 
@@ -76,6 +74,7 @@ forrm.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(forrm) })
     .then((response) => {
       msg.innerHTML = "Message sent successfully!";
+      loadbtn.setAttribute("disabled", "");
       setTimeout(function () {
         msg.innerHTML = "";
       }, 5000);
@@ -99,26 +98,49 @@ async function handleSubmit(event) {
       Accept: "application/json",
     },
   })
-    .then((response) => {
-      if (response.ok) {
-        status.innerHTML = "";
-        form.reset();
-      } else {
-        response.json().then((data) => {
-          if (Object.hasOwn(data, "errors")) {
-            status.innerHTML = data["errors"]
-              .map((error) => error["message"])
-              .join(", ");
-          } else {
-            status.innerHTML = "Oops! There was a problem submitting your form";
-          }
-        });
-      }
-    })
-    .catch((error) => {
-      status.innerHTML = "Oops! There was a problem submitting your form";
-    });
+    // .then((response) => {
+    //   if (response.ok) {
+    //     status.innerHTML = "";
+    //     form.reset();
+        
+    //   } else {
+    //     response.json().then((data) => {
+    //       if (Object.hasOwn(data, "errors")) {
+    //         status.innerHTML = data["errors"]
+    //           .map((error) => error["message"])
+    //           .join(", ");
+    //       } else {
+    //         status.innerHTML = "Oops! There was a problem submitting your form";
+    //       }
+    //     });
+    //   }
+    // })
+    // .catch((error) => {
+    //   status.innerHTML = "Oops! There was a problem submitting your form";
+    // });
 }
-form.addEventListener("submit", handleSubmit);
+//---------------------------------------------------LOADING ANIMATION
+
+const loadbtn = document.getElementById("submit");
+const load = document.querySelector(".load");
+function loading() {
+  loadbtn.style.display = "none";
+  load.classList.add("loader");
+  setTimeout(() => {
+    loadbtn.style.display = "block";
+    load.classList.remove("loader");
+  }, 2500);
+}
+
+//--------------------------------------------------submit button
 
 
+function isEmpty() {
+  let naame = document.getElementById("name").value;
+  let emaail = document.getElementById("email").value;
+  if (naame.length > 0 && emaail.length > 0) {
+    loadbtn.removeAttribute("disabled");
+  } else {
+    loadbtn.setAttribute("disabled", "");
+  }
+}
