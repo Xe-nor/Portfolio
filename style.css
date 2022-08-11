@@ -560,7 +560,7 @@ form .btn2:disabled{
   height: 36px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #fff;
+  border-top-color: red;
   animation: an1 1s ease infinite;
 }
 @keyframes an1 {
