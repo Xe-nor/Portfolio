@@ -670,7 +670,7 @@ nav .fa-solid {
 
   /* <!-------------------------------------------------------------------------------------------------------------------------------- about--------> */
 
-  .sub-title {
+  .sub-title , .portt{
     font-size: 40px;
     text-align: center;
   }
@@ -793,7 +793,7 @@ nav .fa-solid {
     margin-left: 0;
   }
 
-  .sub-title {
+  .sub-title,.portt {
     font-size: 60px;
     text-align: center;
   }
