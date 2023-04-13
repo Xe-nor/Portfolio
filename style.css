@@ -21,7 +21,7 @@ body {
   height: 100vh;
 }
 
-/* <!---------------------------------------------------------------------------------------------------------------------------------- NAVBAR------------> */
+/* <!---------------------------------------------------- NAVBAR------------> */
 
 .down {
   display: flex;
@@ -80,7 +80,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-/* <!---------------------------------------------------------------------------------------------------------------------------------- MAIN TEXT--------> */
+/* <!------------------------------ MAIN TEXT--------> */
 .header-text {
   margin-top: 150px;
   display: flex;
@@ -137,7 +137,7 @@ h3.hello span {
     left: 0%;
   }
 }
-/* <!------------------------------------------------------------------------- ABOUT ---------------------------------------------------------------------> */
+/* <!---------------------------------------------- ABOUT ---------------------------------------------------------------------> */
 .head {
   display: flex;
   justify-content: center;
@@ -217,12 +217,12 @@ h3.hello span {
   margin: 10px 0;
 }
 .content ul li span {
-  color: #b6194b;
+  color: crimson;
   font-weight: 500;
   font-size: 18px;
 }
 
-/* <!-------------------------------------------------------------------------- MY WORK ----------------------------------------------------------------> */
+/* <!----------------------------------------- MY WORK ----------------------------------------------------------------> */
 .port {
   display: flex;
   justify-content: center;
@@ -353,7 +353,7 @@ h3.hello span {
   cursor: pointer;
 }
 
-/* <!------------------------------------------------------------------------- SKILLS -------------------------------------------------------------------> */
+/* <!-------------------------------------------------------- SKILLS -------------------------------------------------------------------> */
 .ski {
   display: flex;
   justify-content: center;
@@ -406,51 +406,23 @@ h3.hello span {
 .right {
   flex-basis: 45%;
 }
-.right .info {
-  display: flex;
-  margin-bottom: 10px;
-  align-items: center;
-  justify-content: space-between;
+
+.skills__subtitle {
+  color: white;
+  margin-bottom: 5px;
 }
-.right span {
-  font-size: 18px;
-  font-weight: 500;
+.skills__name {
+  display: inline-block;
+  background-color: #262626;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  padding: 0.25rem 0.5rem;
+
+  border-radius: 0.25rem;
 }
-.right .line {
-  height: 5px;
-  width: 100%;
-  background: lightgray;
-  position: relative;
-}
-.right .line::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 80%;
-  left: 0;
-  top: 0;
-  background: crimson;
-}
-.right .html::before {
-  width: 90%;
-}
-.right .css::before {
-  width: 60%;
-}
-.right .js::before {
-  width: 30%;
-}
-.right .c::before {
-  width: 70%;
-}
-.right .cpp::before {
-  width: 60%;
-}
-.right .java::before {
-  width: 90%;
-}
-.right .mysql::before {
-  width: 90%;
+.skills__name:hover {
+  background-color: red;
+  color: white;
 }
 
 @media (max-width: 690px) {
@@ -495,7 +467,7 @@ h3.hello span {
   margin-top: 30px;
 }
 .contact-left p i {
-  color: #ff004f;
+  color: crimson;
   margin-right: 15px;
   font-size: 25px;
 }
@@ -511,7 +483,7 @@ h3.hello span {
   transition: transform 0.5s;
 }
 .social-icons a:hover {
-  color: #ff004f;
+  color: crimson;
   transform: translateY(-5px);
 }
 .btn2 {
@@ -548,7 +520,7 @@ form .btn2 {
   cursor: pointer;
   display: block;
 }
-form .btn2:disabled{
+form .btn2:disabled {
   color: grey;
   border-color: grey;
 }
@@ -577,7 +549,6 @@ form .btn2:disabled{
   background: none;
 }
 
-
 #msg {
   margin: 10px 0;
   font-style: italic;
@@ -597,7 +568,7 @@ form .btn2:disabled{
 }
 
 .copyright i {
-  color: #ff004f;
+  color: crimson;
 }
 
 /* <!-------------------------------------------------------------- SMALL SCREEN MEDIA QUERIES-----------------------------------------------------------> */
@@ -670,7 +641,8 @@ nav .fa-solid {
 
   /* <!-------------------------------------------------------------------------------------------------------------------------------- about--------> */
 
-  .sub-title , .portt{
+  .sub-title,
+  .portt {
     font-size: 40px;
     text-align: center;
   }
@@ -793,7 +765,8 @@ nav .fa-solid {
     margin-left: 0;
   }
 
-  .sub-title,.portt {
+  .sub-title,
+  .portt {
     font-size: 60px;
     text-align: center;
   }
